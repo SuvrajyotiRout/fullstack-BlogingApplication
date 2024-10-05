@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 const { checkthetoken } = require("./Middleware/auth");
 const blogRouter = require('./Router/addblogRouter')
 const Blogs = require('./Models/addpost')
-const DB = process.env.DB_CONNECT;
+const DB = process.env.DB_CONNECT ||3000;
 
 mongoose
   .connect(DB)
